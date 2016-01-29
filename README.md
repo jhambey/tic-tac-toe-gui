@@ -1,4 +1,4 @@
-Tic Tac Toe
+Tic Tac Toe GUI
 ===========
 
 This project provides a terminal-based Tic Tac Toe game. The files here
