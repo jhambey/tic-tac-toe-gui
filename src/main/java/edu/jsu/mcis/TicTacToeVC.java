@@ -9,7 +9,7 @@ public class TicTacToeVC extends JPanel implements ActionListener {
 	private JButton[][] button;
 	
 	public TicTacToeVC() {
-		medel = new TicTacToe();
+		model = new TicTacToe();
 		button = new JButton[3][3];
 		
 		setLayout(new GridLayout(3, 3));
@@ -22,6 +22,23 @@ public class TicTacToeVC extends JPanel implements ActionListener {
 				add(button[i][j]);
 			}
 		}	
+	}
+	
+	private void checkForWin() {
+		TicTacToe.Result result = model.getResult();
+		final String s;
+		if(result == TicTacToe.Result.XWINS) {
+			s = "X";
+		}
+		else if(result == TicTacToe.Result.OWINS) {
+			s = "O";
+		}
+		else if(result == TicTacToe.Result.TIE) {
+			s = "TIE";
+		}
+		else {
+			s = "";
+		}
 	}
 	
 	public void actionPerfromed(ActionEvent event) {
