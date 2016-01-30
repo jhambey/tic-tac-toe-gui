@@ -6,25 +6,20 @@ import java.util.Scanner;
 
 
 public class TicTacToe {
-	public static Scanner scan = new Scanner(System.in);
-	public static int row, col;
-	public static char[][] board = new char[3][3];
-	public static char who = 'X';
-	public static int turns = 0;
-	public static String wonHow = "  ";
+	public Scanner scan = new Scanner(System.in);
+	public int row, col;
+	public char[][] board = new char[3][3];
+	public char who = 'X';
+	public int turns = 0;
+	public String wonHow = "  ";
 	
 
 
 	public static void main(String[] args) {
-	NewGame();
-
-		
+	NewGame() model = new NewGame();		
 	}
 	
-	
-
-	
-	public static void NewGame(){
+	public void NewGame(){
 		ClearBoard();
 		PrintBoard();
 		while (StillRunning()){
@@ -39,8 +34,6 @@ public class TicTacToe {
 		GetWinner();
 		Winner();
 		}
-
-
 	}
 	
 	public static void ClearBoard(){
@@ -98,7 +91,6 @@ public class TicTacToe {
 			UnableToMark();
 			out.println("\n\n" + UnableToMark());
 		}
-
 	}
 
 	public static String GetMark(int rMove, int cMove){
@@ -242,12 +234,8 @@ public class TicTacToe {
 				out.println("It is a Tie.");
 				winner = "TIE";
 		}
-		
-
-		
-	
-	}
 		return winner;
-}
+	}
+
 }
 
